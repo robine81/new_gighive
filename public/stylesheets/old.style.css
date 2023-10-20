@@ -1,0 +1,517 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  p {
+    color: white;
+  }
+  
+  a {
+    color: white !important;
+  }
+  
+  a:hover {
+    color: orangered !important;
+  }
+  
+  h2 {
+    color: white !important;
+  }
+  
+  /* Apply flexbox to the .form-container */
+  .form-container {
+    display: flex;
+    flex-direction: column; /* Arrange children vertically */
+    align-items:start; /* Center children horizontally */
+    text-align: center; /* Center text within the container */
+  }
+  
+  /* Style the heading as needed */
+  .form-container h2 {
+    margin-bottom: 20px; /* Add space between the heading and the form */
+  }
+  
+  .btn_login {
+    color: white;
+    font-size: 10px !important;
+    font-weight:bold !important;
+    background: linear-gradient(to bottom, #ff2a00, #ff7f00);
+    border: none;
+    border-radius: 50px;
+    padding: 12px 24px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* Hover effect */
+  .btn_login:hover {
+    background: white;
+    color:black;
+  }
+  
+  /* Additional styling for a similar appearance to ra.co's button */
+  .btn_login:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 87, 0, 0.5);
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center; /* Adjust alignment if needed */
+    align-items: left; /* Adjust alignment if needed */
+  }
+  
+  .btn_edit {
+    color: white;
+    font-size: 10px !important;
+    font-weight: bold !important;
+    background: linear-gradient(to bottom, #ff2a00, #ff7f00);
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 12px 36px; /* Adjust the padding here */
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+    flex: 0; /* Set the flex property to control the button's width */
+    white-space: nowrap; /* Prevent text from wrapping */
+    flex-direction: column;
+  }
+  
+  
+  /* Hover effect */
+  .btn_edit:hover {
+    background: white;
+    color:black;
+  }
+  
+  /* Additional styling for a similar appearance to ra.co's button */
+  .btn_edit:focus {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 87, 0, 0.5);
+  }
+  
+  .btn_register {
+    font-size: 10px !important;
+    font-weight:bold !important;
+    background: none; /* No background color */
+    color: #ff5500; /* Orange text color */
+    border: 2px solid #ff5500; /* Orange border */
+    border-radius: 50px; /* Optional: Rounded corners */
+    padding: 10px 20px; /* Adjust padding as needed */
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* Hover effect */
+  .btn_register:hover {
+    background: #ff5500; /* Orange background on hover */
+    color: #fff; /* White text color on hover */
+  }
+  
+  .jumbotron{
+    background-color: white !important;
+    height: 20rem;
+    padding: 0px !important;
+  }
+  
+  .jumbotron2 {
+    padding: 0px;
+    background-color: black;
+    height: 1000px
+  }
+  
+  .rows-fest img {
+    width:  250px;
+    height: 250px;
+  }
+  
+  .rows-fest {
+      display: flex;
+      list-style: none;
+      flex-wrap: wrap;
+      row-gap: 40px;
+      column-gap: 30px;
+  }
+  
+  .rows-fest button {
+    background-color: white;
+    color: grey;
+    border: none;
+  
+  }
+  
+  .navbar-default {
+    background-color: white !important;
+    border-color: white !important;
+    font-size: 10px;
+    font-weight: bold;
+  }
+  
+  .nav-item {
+    list-style-type: none;
+  }
+  
+  .navbar a {
+    color: black !important;
+  }
+  
+  .navbar-brand {
+    padding: 0px !important;
+  }
+  
+  .tab-content {
+    padding: 15px !important;
+    background-color: transparent;
+  }
+  
+  .nav-tabs {
+    font-size: 10px;
+    font-weight: bold;
+    background-color: rgb(16, 18, 18);
+    border-bottom: none !important;
+  }
+  
+  .nav-tabs li {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .nav-tabs li a {
+    text-decoration: none;
+    position: relative;
+  }
+  
+  .nav-tabs li a:hover::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #ff5e00;
+  }
+  
+  
+  /* Custom CSS for changing active tab color */
+  .nav-tabs > li.active > a,
+  .nav-tabs > li.active > a:hover,
+  .nav-tabs > li.active > a:focus {
+    background-color: black !important; /* Set the desired background color */
+    color: orangered !important; /* Set the desired text color */
+    border: 0 !important;
+  }
+  .nav-tabs > li.active > a {
+    outline: none !important;
+    box-shadow: none !important;
+    border: 0 !important;
+  }
+  
+  /* Remove grey color for hover */
+  .nav-tabs > li:not(.active) > a:hover {
+    background-color: transparent !important;
+    color: orangered !important;
+    border: 0 !important;
+  }
+  
+  .brand-image {
+    height: 4rem !important;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  form input {
+    margin-top: 8px;
+    margin-bottom: 20px; 
+    color: white;
+    background-color: rgb(43, 42, 42);
+    border: none;
+    border-radius: 10px;
+    padding: 16px 24px;
+    white-space: nowrap;
+    height: 20px; /* Set a fixed height for all text fields */
+    display: flex;
+  }
+  
+  form select {
+    background-color: rgb(43, 42, 42);
+  }
+  
+  /* Style the label input field */
+  form label input {
+    background-color: rgb(43, 42, 42);
+    border: none;
+    border-radius: 10px;
+    padding: 14px 24px;
+  }
+  
+  input[type="text"],
+  input[type="date"],
+  input[type="file"],
+  select {
+   text-align: left; /* Align text to the left */
+    /* Add other styling properties as needed */
+  }
+  
+  .festival-input {
+    border-radius: 10px;
+    padding: 16px;
+    padding-right: 150px;
+  }
+  
+  /* Style the file input container */
+  #imageUrl {
+    display: none; /* Hide the original file input */
+  }
+  
+  
+  /* Style the file input container */
+  .custom-file-input {
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 12px;
+    white-space: nowrap;
+    cursor: pointer;
+    display: inline-block; /* Keep the container inline */
+    background: linear-gradient(to bottom, #ff2a00, #ff7f00); /* Add a gradient background */
+  }
+  
+  /* Style the file input itself */
+  .custom-file-input input[type="file"] {
+    opacity: 0; /* Hide the actual file input */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+  
+  /* Style the "Choose File" label */
+  .custom-file-input::before {
+    content: "Choose File"; /* Text for the label */
+    font-size: 10px !important;
+    font-weight: bold !important;
+    background: none; /* No background color */
+    color: #ff5500; /* Orange text color */
+    border: 2px solid #ff5500; /* Orange border */
+    border-radius: 50px; /* Optional: Rounded corners */
+    padding: 5px 10px; /* Adjust padding as needed */
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* Style the label on hover */
+  .custom-file-input:hover::before {
+    background: #ff5500; /* Orange background on hover */
+    color: #fff; /* White text color on hover */
+  }
+  
+  /* Style the label when a file is selected */
+  .custom-file-input input[type="file"]:valid + .custom-file-input::before {
+    background: #ff5500; /* Orange background when a file is selected */
+    color: #fff; /* White text color when a file is selected */
+  }
+  
+  /* Style the label when the input is focused (clicked) */
+  .custom-file-input input[type="file"]:focus + .custom-file-input::before {
+    outline: none; /* Remove the default focus outline */
+    box-shadow: 0 0 
+  }
+  
+  /* Style the label when a file is selected */
+  #imageUrl:valid + .custom-file-input::before {
+    background: #ff5500;
+    color: #fff;
+  }
+  
+  /* Style the label when the input is focused (clicked) */
+  #imageUrl:focus + .custom-file-input::before {
+    outline: none;
+    box-shadow: 0 0 0 0.2rem rgba(255, 87, 0, 0.5);
+  }
+  
+  /* Style the file input itself */
+  #imageUrl:valid + .custom-file-input input[type="file"] {
+    opacity: 0; /* Hide the actual file input */
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+  }
+  
+  .artwork-input {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 45px;
+    width: 100%;
+  }
+  
+  /* Style the file input itself */
+  .artwork-input input[type="file"] {
+    flex: 1;
+    margin: 0; /* Remove any margin */
+    padding: 16px;
+    box-sizing: border-box;
+  }
+  
+  .artwork-btn::before {
+    content: "Choose"; /* Change the text displayed before selecting a file */
+    font-size: 10px !important;
+    font-weight:bold !important;
+    background: none; /* No background color */
+    color: #ff5500; /* Orange text color */
+    border: 2px solid #ff5500; /* Orange border */
+    border-radius: 50px; /* Optional: Rounded corners */
+    padding: 5px 5px; /* Adjust padding as needed */
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  /* Style the button on hover */
+  .artwork-input:hover::before {
+    background: #ff5500; /* Orange background on hover */
+    color: #fff; /* White text color on hover */
+  }
+  
+  .artwork-input::-webkit-file-upload-button {
+    visibility: hidden; /* Hide the default button in some browsers */
+  }
+  
+  /* Style the file input itself */
+  /* input[type="file"] { */
+    /* display: flex;
+    border-radius: 10px;
+    padding: 16px;
+    padding-right: 40px;
+    width: 100%;
+    box-sizing: border-box; */
+    margin: 0; /* Remove any margin */
+    /* align-self: center; /* Center vertically within its container */
+  /* }  */
+  
+  .date-input {
+    border-radius: 10px;
+    padding: 16px;
+    padding-right: 12px;
+  }
+  
+  
+  
+  .my-account {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 1000px;
+  }
+  .column-container {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .column-container a {
+    background-color: white;
+    color: grey;
+    border: none;
+  }
+  
+  
+  /* Style the left column */
+  .form-column-left {
+    flex: 1; /* Take up equal space in the container */
+  }
+  
+  /* Style the right column */
+  .form-column-right {
+    flex: 1; /* Take up equal space in the container */
+  }
+  
+  /* Optional: Style the form elements within each column */
+  .form-column-left label,
+  .form-column-right label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .form-column-left input,
+  .form-column-left select,
+  .form-column-right input {
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+  }
+  
+  .genre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .txt_field {
+    background-color: rgb(43, 42, 42);
+    border: none;
+    border-radius: 10px;
+    padding: 16px 24px;
+    color: white;
+    white-space: nowrap;
+    height: 20px; /* Set a fixed height for all text fields */
+    display: flex;
+    align-items: center; /* Vertically center the content */
+  }
+  
+  .one-festival-container {
+    background-color: black;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    column-gap: 40px;
+    height: 1000px;
+    padding-top: 2rem;
+  }
+  
+  .festival-img {
+    width:  350px;
+    height: 350px;
+  }
+  
+  .left-column {
+    width: 30%;
+  }
+  
+  .left-column a {
+    color: blueviolet;
+  }
+  
+  /* Remove the white outline for tabs */
+  .nav-tabs > li > a {
+    color: white !important;
+    outline: none !important;
+    box-shadow: none !important;
+  }
+  
+  .search-button {
+    background-color: transparent;
+    border: none !important;
+    display: flex;
+    align-items: center; /* Vertically center the content */
+  }
+  
+  .search-button .fas {
+    border: none !important;
+    outline: none !important;
+  }

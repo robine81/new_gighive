@@ -1,0 +1,33 @@
+<div class="jumbotron2">
+  <div class="container w-75 my-account">
+    <div class="column-container">
+      <h2>Account settings</h2>
+      <form action="/profile/profile-edited" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name" value="<%=user.name%>">
+        <label for="surname">Surname</label>
+        <input type="text" name="surname" value="<%=user.surname %>">
+        <label for="username">Username</label>
+        <input type="text" name="username" value="<%=user.username %>">
+        <label for="email">Email</label>
+        <input type="email" name="email" value="<%=user.email %>">
+      </br>
+        <button class="btn_edit" type="submit">Update profile</button>
+      </form>       
+    </div>
+    <div class="column-container">
+      <h2>Your festivals</h2>
+        <ul>
+          <% allFestivals.forEach(festival => { %>
+            <li style="list-style-type: none;">
+              <h4><%-festival.name%></h4>
+              <a href="/festival/edit-festival/<%-festival._id%>" class="btn_festival_edit">Edit</a>
+              <a href="/festival/delete-festival/<%-festival._id%>" class="btn_festival_edit">Delete</a>
+            </li>
+            <% }) %>
+          </ul>
+        </br>
+          <a href="/festival/add-festival" class="btn_festival_submit">Submit a festival</a> 
+    </div>
+  </div>
+</div>

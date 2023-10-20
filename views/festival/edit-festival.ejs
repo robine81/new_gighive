@@ -1,0 +1,53 @@
+<div class="jumbotron2">
+  <div class="container w-75 my-account">
+    <div class="form-container">
+      <h2>Edit festival Page</h2>
+      <form action="/festival/edit-festival/<%-festivalToEdit._id%>" method="POST" enctype="multipart/form-data">
+        <div class="column-container">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="name">Name of Festival</label>
+              <input class="festival-input" type="text" name="name" value="<%= festivalToEdit.name %>">        
+              <label for="venue">Name of Venue</label>
+              <input class="festival-input" type="text" name="venue" value="<%= festivalToEdit.venue %>">        
+              <label for="date">Date</label>
+              <input type="date" name="date" value="<%= festivalToEdit.date %>">
+              <label for="genre">Selected genre: <%= festivalToEdit.genre %> </label>
+              <select class="festival-input" id="selectElement" multiple id="genre" name="genre">
+                <option value="House">House</option>
+                <option value="Techno">Techno</option>
+                <option value="Trance">Trance</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+            <label for="artwork">Artwork</label></br>
+            <img src="<%= festivalToEdit.imageUrl %>" alt="artwork"/></br></br>
+            <input type="hidden" name="selectedFileName" id="selectedFileName" value="">
+            <input type="file" id="imageUrl" name="imageUrl" accept="image/png, image/jpeg">
+            <label for="imageUrl"><i class="glyphicon glyphicon-open"></i> Upload Artwork</label>
+            <span>
+              <strong>Chosen file:</strong>
+              <span id="file-name">None</span>
+            </span>
+            <script>
+              document.getElementById('imageUrl').onchange = function () {
+                const input = this;
+                const fileName = input.value.split('\\').pop(); // Extracts the file name from the full path
+                document.getElementById('file-name').innerHTML = fileName;
+                document.getElementById('selectedFileName').value = fileName;
+              };
+              </script>
+
+            <label for="textInfo">textInfo:</label>
+            <input class="festival-input" type="text" name="textInfo" value="<%= festivalToEdit.textInfo %>">        
+              <label for="socialMedia">Social Media:</label>
+              <input type="text" name="socialMedia" value="<%= festivalToEdit.socialMedia %>">
+              
+              <button class="btn_edit" type="submit">Update festival</button>
+      </form>
+    </div>  
+  </div>
+</div>
+      
+  <% if (typeof errorMessage !== 'undefined') { %> <%= errorMessage %> <% } %>
+  

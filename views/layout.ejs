@@ -1,0 +1,86 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title><%= appTitle %></title>
+    <link rel="stylesheet" href="/stylesheets/style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon_gighive_io/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon_gighive_io/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon_gighive_io/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Gighive</title>
+</head>
+
+<body>
+    <div class="jumbotron">
+        <div class="container nav-container">
+            <nav class="navbar navbar-default">
+                <div class="container-fluid">
+                    <div class="nav-content">
+                        <div class="navbar-header">
+                            <a class="navbar-brand" href="/">
+                                <img class="brand-image" src="/images/GIGHIVE-Logo-BLK.png" alt="gighive-logo">
+                            </a>
+                            <!-- Modified button to trigger the search modal -->
+                            <button type="button" class="search-button" data-toggle="modal" data-target="#searchModal"><i class="fas fa-search"></i></button>
+                        </div>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="/">Home</a></li>
+                            <li><a href="/profile">My Account</a></li>
+                            <li><a href="/auth/logout">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+
+    <%- body %>
+
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="searchModalLabel">Enter your search</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form action="/search" method="GET">
+                        <div class="form-group">
+                            <label for="searchQuery"></label>
+                            <input type="text" class="form-control" id="searchQuery" name="query" placeholder="Search...">
+                        </div>
+                        <button type="submit" class="btn_edit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="/js/script.js"></script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $(".nav-tabs a").click(function () {
+                $(this).tab('show');
+            });
+        });
+    </script>
+</body>
+
+</html>

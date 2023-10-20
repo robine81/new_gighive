@@ -1,0 +1,65 @@
+<div class="jumbotron2">
+  <div class="container w-75 my-account">
+    <div class="form-container">
+      <h2>Submit a festival</h2>
+      <form action="/festival/add-festival" method="POST" enctype="multipart/form-data">
+        <div class="column-container">
+          <div class="row">
+            <div class="col-md-6">
+              <label for="name">Name of Festival</label>
+              <input class="festival-input" type="text" id="name" name="name">
+              <label for="venue">Name of Venue</label>
+              <input class="festival-input" type="text" id="venue" name="venue">
+              <label for="date">Date</label>
+              <input class="date-input" type="date" id="date" name="date">
+              <script>
+                // Get the current date
+                const today = new Date();
+
+                // Format the date as "YYYY-MM-DD" for the input element
+                const yyyy = today.getFullYear();
+                const mm = String(today.getMonth() + 1).padStart(2, '0'); // January is 0!
+                const dd = String(today.getDate()).padStart(2, '0');
+                const formattedDate = `${yyyy}-${mm}-${dd}`;
+
+                // Set the input value to the formatted date
+                document.getElementById('date').value = formattedDate;
+              </script>
+              <label class="genre" for="genre">Genre</label>
+              <select class="festival-input" id="selectElement" multiple id="genre" name="genre">
+                <option value="House">House</option>
+                <option value="Techno">Techno</option>
+                <option value="Trance">Trance</option>
+              </select>
+            </div>
+            <div class="col-md-6">
+              <label for="textInfo">Info</label>
+              <textarea class="festival-input form-control" type="text" id="textInfo" name="textInfo"></textarea>
+            </br>
+              <label for="socialMedia">Social Media</label>
+              <input class="festival-input" type="text" id="socialMedia" name="socialMedia">
+              <input type="hidden" name="selectedFileName" id="selectedFileName" value="">
+              <input type="file" id="imageUrl" name="imageUrl" accept="image/png, image/jpeg">
+              <label for="imageUrl"><i class="glyphicon glyphicon-open"></i> Upload Artwork</label>
+              <span>
+                <strong>Chosen file:</strong>
+                <span id="file-name">None</span>
+              </span>
+              <script>
+                document.getElementById('imageUrl').onchange = function () {
+                  const input = this;
+                  const fileName = input.value.split('\\').pop(); // Extracts the file name from the full path
+                  document.getElementById('file-name').innerHTML = fileName;
+                  document.getElementById('selectedFileName').value = fileName;
+                };
+                </script>
+            </div>
+          </div>
+        </div>
+      </br>
+        <button class="btn_edit" type="submit">Add new festival</button>
+      </form>
+    </div>
+  </div>
+</div>
+<% if (typeof errorMessage !== 'undefined') { %> <%= errorMessage %> <% } %>

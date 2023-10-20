@@ -1,0 +1,19 @@
+<div class="jumbotron2">
+  <div class="container w-75 my-account">
+    <div class="profile-container">
+      <h2>Edit your profile</h2>
+      <form id="userForm" action="/profile/profile-edited" method="POST">
+        <label for="name">Name</label>
+        <input class="txt_field" type="text" name="name" value="<%=user.name%>">
+        <label for="surname">Surname</label>
+        <input class="txt_field" type="text" name="surname" value="<%=user.surname %>">
+        <label for="username">Username</label>
+        <input class="txt_field" type="text" name="username" value="<%=user.username %>">
+        <label for="email">Email</label>
+        <input class="txt_field" type="email" name="email" value="<%=user.email %>">
+      </br>
+        <button class="btn_edit" type="submit">Edit profile</button>
+      </form>
+      </div>
+  </div>
+</div>

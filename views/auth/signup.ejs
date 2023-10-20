@@ -1,0 +1,27 @@
+<div class="jumbotron2">
+  <div class="container w-75 my-account">
+    <div class="column-container">
+      <h2>Login to your account</h2>
+      <form action="/auth/login" method="POST">
+        <label>Username<br><input type="text" name="username" />
+        </label>
+        <label>Password<br><input type="password" name="password" />
+        </label><br>
+        <button class="btn_login" type="submit">Login</button>
+      </form>
+    </div>
+    <div class="column-container">
+      <h2>New to Gighive? Sign up</h2>
+      <form action="/auth/signup" method="POST">
+        <label>Username<br><input type="text" name="username" />
+        </label>
+        <label>Email<br><input type="email" name="email" />
+        </label>
+        <label>Password<br><input type="password" name="password" />
+        </label>
+        <button class="btn_register" type="submit">Register</button>
+      </form>
+  </div>
+</div>
+
+<% if (typeof errorMessage !== 'undefined') { %> <%= errorMessage %> <% } %>

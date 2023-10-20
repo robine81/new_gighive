@@ -1,0 +1,51 @@
+<div class="jumbotron2"> 
+  <div class="container festtabs w-75">
+      <ul class="nav nav-tabs">
+        <li class="active"><a href="#alpha">Alphabetical</a></li>
+        <li><a href="#techno">Techno</a></li>
+        <li><a href="#house">House</a></li>
+        <li><a href="#trance">Trance</a></li>
+      </ul>
+
+      <div class="tab-content">
+        <div id="alpha" class="tab-pane fade in active">
+          <ul class="rows-fest">
+          <% sortedAscFestivals.forEach(sortFestival => { %>
+            <li><a href="/festival/<%-sortFestival.id%>">
+                <img src=<%-sortFestival.imageUrl%> alt="Artwork"></a></li>
+              <% }) %>
+          </ul>
+        </div>
+        <div id="techno" class="tab-pane fade">
+          <ul class="rows-fest">
+            <% technoFestivals.forEach(technoFestival => { %>
+              <li>
+                <a href="/festival/<%-technoFestival._id%>">
+                <img src=<%-technoFestival.imageUrl%> alt="Artwork"></a>
+              </li>
+              <% }) %>
+            </ul>
+        </div>
+        <div id="house"class="tab-pane fade">
+          <ul class="rows-fest">
+            <% houseFestivals.forEach(houseFestival => { %>
+              <li>
+                <a href="/festival/<%-houseFestival._id%>">
+                <img src=<%-houseFestival.imageUrl%> alt="Artwork"></a>
+              </li>
+              <% }) %>
+            </ul>
+        </div>
+        <div id="trance" class="tab-pane fade">
+            <ul class="rows-fest">
+              <% tranceFestivals.forEach(tranceFestival => { %>
+                <li>
+                  <a href="/festival/<%-tranceFestival._id%>">
+                  <img src=<%-tranceFestival.imageUrl%> alt="Artwork"></a>
+                </li>
+                <% }) %>
+            </ul>
+        </div>
+      </div>
+    </div>
+  </div>

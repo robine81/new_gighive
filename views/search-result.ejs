@@ -1,0 +1,10 @@
+<div class="jumbotron2 search-container">
+    <div class="container">
+        <h2>Festivals</h2>
+        <ul class="rows-fest">
+            <% allFestivals.forEach(oneFestival => { %>
+              <li><a href="/festival/<%-oneFestival.id%>">
+                  <img src=<%-oneFestival.imageUrl%> alt="Artwork"></a></li>
+                <% }) %>
+        </ul>
+    </div>
